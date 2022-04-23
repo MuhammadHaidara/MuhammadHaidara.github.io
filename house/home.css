@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/** code by webdevtrick ( https://webdevtrick.com ) **/
+* {
+  transition: .33s ease all;
+  box-sizing: border-box;
+  
+}
+body {
+	margin: 0;
+	padding: 0;
+  
+}
+header {
+  background-color: #2D2424;
+  text-align: center;
+  padding: 20px;
+}
+header h2 {
+  margin:0;
+  padding: 10;
+  font-weight: bold;
+  color:#872341;
+  letter-spacing: 5px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html {
+  font-family: 'Source Sans Pro', sans-serif;
+  box-sizing: border-box;
+}
+span {
+  display: inline-block;
+  width: 50px;
+  height: 5px;
+  background-color: #FF3434;
+  margin-bottom: 30px;
+}
+div.main {
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(to top, #BD3232,#2D2424),
+  url(https://grainy-gradients.vercel.app/noise.svg);
+  
+}
+div.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+}
+imag {
+  width: 100%;
+}
+.text-container h1 {
+  font-weight: 500;
+  font-size: 36px;
+  margin: 10px 0 15px;
+  font-family: 'Playfair Display',sans-serif;
+}
+p {
+  font-weight: 300;
+  line-height: 20px;
+  margin: 0 0 10px 0;
+}
+
+div.imag {
+  height: 400px;
+  width: 100%;
+  background: url(image/01.png);
+  background-position: center;
+  background-size: cover;
+}
+div.imag2 {
+  height: 400px;
+  width: 100%;
+  background: url(image/02.png);
+  background-position: center;
+  background-size: cover;
+}
+div.imag3 {
+  height: 400px;
+  width: 100%;
+  background: url(image/03.png);
+  background-position: center;
+  background-size: cover;
+}
+div.text-container {
+  margin: 60px 45px 55px;
+}
+@media screen and (min-width: 768px) {
+  div.container {
+    flex-direction: row;
+    width: 100%;
+  }
+div.imag {
+    height: 420px;
+    min-width: 360px;
+  }
+ div.text-container {
+    margin: 0 60px;
+    max-width: 660px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  div.container {
+    max-width: 1200px;
+  }
+}
+
+/* floating button */
+.label-container{
+	position:fixed;
+	bottom:48px;
+	right:105px;
+	display:table;
+	visibility: hidden;
+}
+
+.label-text{
+	color:#FFF;
+	background:rgba(51,51,51,0.5);
+	display:table-cell;
+	vertical-align:middle;
+	padding:10px;
+	border-radius:3px;
+}
+
+.label-arrow{
+	display:table-cell;
+	vertical-align:middle;
+	color:#333;
+	opacity:0.5;
+}
+
+.float{
+	position:fixed;
+	width: 65px;
+	height: 65px;
+	bottom:40px;
+	right:40px;
+	background-color:#F8DF8B;
+	color:#2D2424;
+	border-radius:50px;
+	text-align:center;
+}
+
+.my-float{
+	font-size:30px;
+  margin-top: 16px;
+}
+
+a.float + div.label-container {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease;
+}
+
+a.float:hover + div.label-container{
+  visibility: visible;
+  opacity: 1;
+}

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+body{
+	margin: 15px;
+	padding: 0;
+	font-family: 'Playfair Display', serif;
+	color: #333;
+	background-color: #EDF2F7;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 150;
+}
+
+h1{
+	text-align: center;
+	padding-bottom: 10px;
+	margin: 20px auto;
+}
+
+h3 {
+	line-height: 28px;
+	font-size: 18px;
+	padding:3px;	
+}
+
+/* CONTAINERS */
+
+.container {max-width: 850px; width: 100%; margin: 0 auto;}
+.four { width: 32.26%; max-width: 32.26%;
+    box-shadow:
+    7.5px 5.1px 5.3px rgba(0, 0, 0, 0.028),
+    25.2px 17.2px 17.9px rgba(0, 0, 0, 0.042),
+    113px 77px 80px rgba(0, 0, 0, 0.07);
+}
+
+
+/* COLUMNS */
+
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+
+.col:first-of-type { margin-left: 0; }
+
+/* CLEARFIX */
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+/* FORM */
+
+.form .plan input, .form .payment-plan input, .form .payment-type input{
+	display: none;
+}
+
+.form label{
+	position: relative;
+	color: #872341;
+	background-color: #F6F6F6;
+	font-size: 20px;
+	text-align: center;
+	height: auto;
+    width: 300ox;
+	line-height: 10px;
+	display: block;
+	cursor: pointer;
+	border: 3px solid transparent;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+label img {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    content: "";
+  clear: both;
+  display: table;
+}
+
+
+.form .plan input:checked + label, .form .payment-plan input:checked + label, .form .payment-type input:checked + label{
+	border: 3px solid #333;
+	background-color: #872341;
+    color: white;
+}
+
+.form .plan input:checked + label:after, form .payment-plan input:checked + label:after, .form .payment-type input:checked + label:after{
+	content: "\2713";
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border-radius: 100%;
+	border: 2px solid #333;
+	background-color: #872341;
+	z-index: 999;
+	position: absolute;
+	top: -10px;
+	right: -10px;
+}
+
+.submit{
+	padding: 15px 60px;
+	border: none;
+	margin: 10px 0;
+	background-color: #872341;
+	color: #fff;
+	border: 2px solid #333;
+	font-size: 18px;
+    float: right;
+}
+
+
